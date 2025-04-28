@@ -16,6 +16,9 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   title: "LG Best Shop 용산전자상가점",
   description: "LG Best Shop 용산전자상가점 개인 홈페이지입니다.",
+  icons: {
+    icon: "/image/lg_favicon.png",
+  },
 };
 
 export default function RootLayout({

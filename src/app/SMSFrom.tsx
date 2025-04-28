@@ -48,7 +48,7 @@ export function SendSMSForm() {
             <button
               type="button"
               key={btnType}
-              className={`px-4 py-4 w-full max-w-[140px] shadow-lg rounded-md ${type === btnType ? "bg-blue-500 text-white" : "bg-white"}`}
+              className={`px-4 py-4 w-full max-w-[140px] shadow-lg rounded-md ${type === btnType ? "bg-gray-800 text-white" : "bg-white"}`}
               onClick={() => setType(btnType)}
             >
               {btnType}
@@ -97,7 +97,7 @@ export function SendSMSForm() {
         </label>
       </div>
 
-      <button type="submit" className="bg-blue-500 text-white px-10 py-4 rounded-md w-full max-w-[448px] shadow-lg">
+      <button type="submit" className="bg-gray-800 text-white px-10 py-4 rounded-md w-full max-w-[448px] shadow-lg">
         상담예약
       </button>
     </form>
