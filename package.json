@@ -13,7 +13,8 @@
     "coolsms-node-sdk": "^2.1.0",
     "next": "14.2.28",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "solapi": "^5.4.0"
   },
   "devDependencies": {
     "@types/node": "^20",
