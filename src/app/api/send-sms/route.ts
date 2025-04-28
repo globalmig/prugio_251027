@@ -11,9 +11,9 @@ export async function POST(req: Request) {
     const messageService = new msgModule(apiKey, apiSecret);
 
     const params = {
-      text: `[솔라피 테스트] ${name} 고객님께서 ${type} 상담 예약을 신청하셨습니다! 전화번호: ${phone}`,
-      to: phone,
-      from: "01039671421", // 발신번호는 인증된 번호여야 합니다.
+      text: `담당자님!${name} 고객님께서 ${type} 상담 예약을 신청하셨습니다! 전화번호: ${phone}`,
+      to: "", // 여기에 담당자의 실제 전화번호를 입력하세요
+      from: "", // 인증된 회사 발신번호
     };
 
     const response = await messageService.send([params]);
