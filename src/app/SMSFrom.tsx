@@ -37,11 +37,13 @@ export function SendSMSForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col justify-center items-center w-full py-12 my-10 bg-gray-100 gap-4">
-      <h3 className="text-2xl font-bold">간편 상담신청</h3>
+    <form onSubmit={handleSubmit} className="flex flex-col justify-center items-center w-full py-12 my-10 bg-gray-100 gap-4 px-4 ">
+      <h3 className="text-xl md:text-2xl font-bold" id="smsForm">
+        간편 상담신청
+      </h3>
 
       <div className="inputs flex flex-col gap-4 w-full max-w-md">
-        <div className="inputType flex gap-2">
+        <div className="inputType flex gap-2 text-sm md:text-base">
           {["일반구매", "혼수", "이사"].map((btnType) => (
             <button
               type="button"
@@ -74,7 +76,7 @@ export function SendSMSForm() {
           onChange={(e) => setPhone(e.target.value)}
         />
         <label className="text-sm  p-2 rounded">
-          <div className="w-full max-w-[448px] h-24 p-2 border border-gray-300 rounded bg-white text-xs">
+          <div className="w-full max-w-[448px] h-auto p-2 border border-gray-300 rounded bg-white text-xs">
             <p>수집 항목: 이름, 전화번호</p>
             <p>수집 목적: 상담 신청에 대한 확인 및 답변 제공</p>
             <p>보유 기간: 상담 완료 후 즉시 파기</p>

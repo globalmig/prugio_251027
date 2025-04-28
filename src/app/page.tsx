@@ -3,16 +3,22 @@ import { SendSMSForm } from "./SMSFrom";
 
 export default function Home() {
   return (
-    <div>
-      <header className="flex justify-between items-center p-4 bg-gray-800 text-white">
+    <div className="">
+      <header className="flex justify-between items-center p-4 bg-gray-800 text-white w-full">
         <Image src="/image/logo-bestshop.svg" alt="로고" width={250} height={250} />
-
-        <a href="https://bestshop.lge.co.kr/counselReserve/main/MC11420001?inflow=lgekor&orgCode=C323" target="_blank">
-          <button className="text-white px-6 py-2 rounded-xl border-[1px] border-white">상담예약</button>
+        <a href="#smsForm" className=" text-white px-6 py-2 rounded-xl border-[1px] border-white">
+          상담예약
         </a>
       </header>
 
-      <main className="flex flex-col items-center justify-center min-h-screen ">
+      <main className="flex flex-col items-center justify-center  w-full h-full ">
+        <Image
+          src="/image/01_start_banner.jpg"
+          alt="배너"
+          layout="responsive" // intrinsic이미지 비율 유지responsive
+          width={1000} // 적당한 크기로 설정
+          height={1300} // 비율에 맞게 설정
+        />
         <SendSMSForm />
         {/* 구글 지도 api start */}
         <iframe

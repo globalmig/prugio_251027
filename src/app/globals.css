@@ -14,6 +14,11 @@
   }
 }
 
+html {
+  scroll-padding-top: 20vh; /* 뷰포트 높이의 50%만큼 패딩 추가 */
+  scroll-behavior: smooth;
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
