@@ -6,7 +6,7 @@ export default function Home() {
     <div className="">
       <header className="flex justify-between items-center p-4 bg-gray-800 text-white w-full">
         <Image src="/image/logo-bestshop.svg" alt="로고" width={250} height={250} />
-        <a href="#smsForm" className=" text-white px-6 py-2 rounded-xl border-[1px] border-white">
+        <a href="#smsForm" className=" text-white px-6 py-2 rounded-xl border-[1px] border-white text-sm md:text-base hover:bg-white hover:text-gray-800 transition duration-300">
           상담예약
         </a>
       </header>

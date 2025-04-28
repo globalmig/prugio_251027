@@ -64,6 +64,10 @@ export function SendSMSForm() {
           className="inputName border-2 border-gray-300 rounded-md p-2"
           value={name}
           onChange={(e) => setName(e.target.value)}
+          onInput={(e) => {
+            const input = e.target as HTMLInputElement;
+            input.value = input.value.replace(/[^A-Za-z가-힣ㄱ-ㅎㅏ-ㅣ]/gi, "");
+          }}
         />
         <input
           type="text"
@@ -74,6 +78,10 @@ export function SendSMSForm() {
           className="inputPhone border-2 border-gray-300 rounded-md p-2"
           value={phone}
           onChange={(e) => setPhone(e.target.value)}
+          onInput={(e) => {
+            const input = e.target as HTMLInputElement;
+            input.value = input.value.replace(/[^0-9]/g, "");
+          }}
         />
         <label className="text-sm  p-2 rounded">
           <div className="w-full max-w-[448px] h-auto p-2 border border-gray-300 rounded bg-white text-xs">
