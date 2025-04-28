@@ -32,10 +32,10 @@ export default function Home() {
         />
         {/* 구글 지도 api end */}
       </main>
-      <footer className="flex justify-center items-center p-4 bg-gray-800 text-white">
+      {/* <footer className="flex justify-center items-center p-4 bg-gray-800 text-white">
         <div className="text-center"></div>
         <p>Copyright © 2023 LG Electronics. All rights reserved.</p>
-      </footer>
+      </footer> */}
     </div>
   );
 }
