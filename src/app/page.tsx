@@ -22,7 +22,7 @@ export default function Home() {
         <SendSMSForm />
         {/* 구글 지도 api start */}
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3163.902634480141!2d126.96582660000001!3d37.533792399999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca21aa7116bff%3A0xfc51f4daeb70a35f!2zTEfsoITsnpAgQkVTVFNIT1Ag64KY7KeE7IOB6rCA7KCQ!5e0!3m2!1sko!2skr!4v1745546694531!5m2!1sko!2skr"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3163.9348477325843!2d126.95694892606545!3d37.5330330760482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca206a002e973%3A0x953df405bf8377de!2z7Jqp7IKw7KCE7J6Q656c65Oc!5e0!3m2!1sko!2skr!4v1745885072550!5m2!1sko!2skr"
           width="100%"
           height="450"
           style={{ border: 0 }}
