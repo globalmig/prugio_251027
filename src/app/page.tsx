@@ -32,10 +32,10 @@ export default function Home() {
         />
         {/* 구글 지도 api end */}
       </main>
-      {/* <footer className="flex justify-center items-center p-4 bg-gray-800 text-white">
-        <div className="text-center"></div>
-        <p>Copyright © 2023 LG Electronics. All rights reserved.</p>
-      </footer> */}
+      <footer className="flex flex-col justify-center items-center p-10 bg-gray-800 text-white">
+        <p>대표: 김진웅 / 사업자명: 우주전자 전자랜드지점 /사업자등록번호: 106-85-38456 </p>
+        <p>주소: 서울특별시 용산구 청파로 74 용산전자랜드</p>
+      </footer>
     </div>
   );
 }
