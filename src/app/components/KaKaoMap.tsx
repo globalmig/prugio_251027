@@ -14,6 +14,7 @@ export default function KakaoMap() {
 
   if (error) {
     console.error("❌ 카카오맵 로딩 중 에러 발생:", error);
+
     return <div>⚠️ 지도 로딩에 실패했습니다. API 키 또는 도메인 설정을 확인해주세요.</div>;
   }
 

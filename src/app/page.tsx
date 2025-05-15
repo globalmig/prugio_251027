@@ -2,10 +2,11 @@
 
 import Image from "next/image";
 import { SendSMSForm } from "./SMSFrom";
-
-import KakaoMap from "./components/KaKaoMap";
+import Kakao from "./Kakao";
+// import KakaoMap from "./components/KaKaoMap";
 
 export default function Home() {
+  <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=0d1c4736538ee8356be0f121e3cdaf2d"></script>;
   return (
     <div className="">
       <header className="flex justify-between items-center p-4 bg-gray-800 text-white w-full">
@@ -24,7 +25,7 @@ export default function Home() {
           height={1300} // 비율에 맞게 설정
         />
         <SendSMSForm />
-
+        <Kakao />
         {/* <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3163.9348477325843!2d126.95694892606545!3d37.5330330760482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca206a002e973%3A0x953df405bf8377de!2z7Jqp7IKw7KCE7J6Q656c65Oc!5e0!3m2!1sko!2skr!4v1745885072550!5m2!1sko!2skr"
           width="100%"
@@ -34,7 +35,6 @@ export default function Home() {
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
         /> */}
-        <KakaoMap />
       </main>
       <footer className="flex flex-col justify-center items-center p-10 bg-gray-800 text-white">
         <p>대표: 김진웅 / 사업자명: 우주전자 전자랜드지점 /사업자등록번호: 106-85-38456 </p>
