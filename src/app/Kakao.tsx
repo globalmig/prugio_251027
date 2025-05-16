@@ -1,7 +1,7 @@
 import { Map, CustomOverlayMap, useKakaoLoader } from "react-kakao-maps-sdk";
 import Link from "next/link";
 export default function Kakao() {
-  const appkey = process.env.KAKAO_MAP_API_KEY;
+  const appkey = process.env.NEXT_PUBLIC_KAKAO_MAP_API_KEY;
 
   if (!appkey) {
     throw new Error("카카오 API 키 오류. 다시 확인해주세요");
