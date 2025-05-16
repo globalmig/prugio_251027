@@ -1,24 +1,51 @@
-"use client"; // Next.js 13 app 폴더에서 클라이언트 컴포넌트일 때 필수!
-
-import { Map, MapMarker, useKakaoLoader } from "react-kakao-maps-sdk";
-
+import { Map, CustomOverlayMap, useKakaoLoader } from "react-kakao-maps-sdk";
+import Link from "next/link";
 export default function Kakao() {
-  const [loading, error] = useKakaoLoader({
-    appkey: "0d1c4736538ee8356be0f121e3cdaf2d", // 발급 받은 APPKEY
-  });
+  const appkey = process.env.NEXT_PUBLIC_KAKAO_MAP_API_KEY;
 
-  if (error) {
-    return <div>Failed to load Kakao Map: {error.message}</div>;
+  if (!appkey) {
+    throw new Error("카카오 API 키가 없습니다. .env.local에 NEXT_PUBLIC_KAKAO_MAP_API_KEY를 설정해주세요.");
   }
 
-  if (loading) {
-    return <div>Loading Kakao Map...</div>;
-  }
+  const [loading, error] = useKakaoLoader({ appkey });
+
+  if (error) return <div>Failed to load Kakao Map: {error.message}</div>;
+  if (loading) return <div>Loading Kakao Map...</div>;
+
   return (
-    <Map center={{ lat: 33.5563, lng: 126.79581 }} style={{ width: "100%", height: "360px" }}>
-      <MapMarker position={{ lat: 33.55635, lng: 126.795841 }}>
-        <div style={{ color: "#000" }}>Hello World!</div>
-      </MapMarker>
+    <Map center={{ lat: 37.5319, lng: 126.9651 }} style={{ width: "100%", height: "360px" }}>
+      <Link href="https://map.naver.com/p/entry/place/33706664?c=18.08,0,0,0,dh">
+        <CustomOverlayMap position={{ lat: 37.5319, lng: 126.9651 }}>
+          <div style={{ position: "relative", display: "inline-block", textAlign: "center" }}>
+            {/* 말풍선 박스 */}
+            <div
+              style={{
+                backgroundColor: "white",
+                padding: "6px 12px",
+                borderRadius: "8px",
+                boxShadow: "0 2px 6px rgba(0,0,0,0.3)",
+                whiteSpace: "nowrap",
+                fontSize: "14px",
+                color: "#000",
+                marginBottom: "6px",
+              }}
+            >
+              서울특별시 용산구 청파로 74 용산전자랜드
+            </div>
+            {/* CSS 삼각형 핀 */}
+            <div
+              style={{
+                width: 0,
+                height: 0,
+                borderLeft: "10px solid transparent",
+                borderRight: "10px solid transparent",
+                borderTop: "15px solid #333", // 어두운 회색 포인터
+                margin: "0 auto",
+              }}
+            />
+          </div>
+        </CustomOverlayMap>
+      </Link>
     </Map>
   );
 }

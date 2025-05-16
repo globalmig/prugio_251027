@@ -3,7 +3,7 @@
 import { Map, MapMarker, useKakaoLoader } from "react-kakao-maps-sdk";
 
 export default function KakaoMap() {
-  const kakaoAppKey = process.env.NEXT_PUBLIC_APPKEY || "0d1c4736538ee8356be0f121e3cdaf2d";
+  const kakaoAppKey = process.env.NEXT_PUBLIC_KAKAO_MAP_API_KEY || "a3060e668720b1ba8f2d5b7fd295db4f";
 
   // 🔍 키 확인용 로그
   console.log("📦 Kakao API Key:", kakaoAppKey);
