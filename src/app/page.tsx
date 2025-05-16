@@ -3,10 +3,11 @@
 import Image from "next/image";
 import { SendSMSForm } from "./SMSFrom";
 import Kakao from "./Kakao";
+import Script from "next/script";
+
 // import KakaoMap from "./components/KaKaoMap";
 
 export default function Home() {
-  <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=0d1c4736538ee8356be0f121e3cdaf2d"></script>;
   return (
     <div className="">
       <header className="flex justify-between items-center p-4 bg-gray-800 text-white w-full">
