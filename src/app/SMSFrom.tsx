@@ -37,7 +37,7 @@ export function SendSMSForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col justify-center items-center w-full py-12 my-10 bg-gray-100 gap-4 px-4 ">
+    <form onSubmit={handleSubmit} className="flex flex-col justify-center items-center w-full py-12 mb-4 bg-gray-100 gap-4 px-4 ">
       <h3 className="text-xl md:text-2xl font-bold" id="smsForm">
         간편 상담신청
       </h3>
@@ -48,7 +48,7 @@ export function SendSMSForm() {
             <button
               type="button"
               key={btnType}
-              className={`px-4 py-4 w-full max-w-[140px] shadow-lg rounded-md ${type === btnType ? "bg-gray-800 text-white" : "bg-white"}`}
+              className={`px-4 py-4 w-full max-w-[140px] shadow-lg rounded-md ${type === btnType ? "bg-[#24114c] text-white" : "bg-white"}`}
               onClick={() => setType(btnType)}
             >
               {btnType}
@@ -61,7 +61,7 @@ export function SendSMSForm() {
           minLength={2}
           required
           placeholder="이름"
-          className="inputName border-2 border-gray-300 rounded-md p-2"
+          className="inputName border-2 border-gray-300 rounded-md p-4"
           value={name}
           onChange={(e) => setName(e.target.value)}
           onInput={(e) => {
@@ -75,7 +75,7 @@ export function SendSMSForm() {
           minLength={11}
           required
           placeholder="전화번호"
-          className="inputPhone border-2 border-gray-300 rounded-md p-2"
+          className="inputPhone border-2 border-gray-300 rounded-md p-4"
           value={phone}
           onChange={(e) => setPhone(e.target.value)}
           onInput={(e) => {
@@ -83,8 +83,8 @@ export function SendSMSForm() {
             input.value = input.value.replace(/[^0-9]/g, "");
           }}
         />
-        <label className="text-sm  p-2 rounded">
-          <div className="w-full max-w-[448px] h-auto p-2 border border-gray-300 rounded bg-white text-xs">
+        <label className="text-sm  rounded">
+          <div className="w-full  h-auto p-2 border border-gray-300 rounded bg-white text-xs">
             <p>수집 항목: 이름, 전화번호</p>
             <p>수집 목적: 상담 신청에 대한 확인 및 답변 제공</p>
             <p>보유 기간: 상담 완료 후 즉시 파기</p>
@@ -97,7 +97,7 @@ export function SendSMSForm() {
         </label>
       </div>
 
-      <button type="submit" className="bg-gray-800 text-white px-10 py-4 rounded-md w-full max-w-[448px] shadow-lg">
+      <button type="submit" className="bg-[#24114c] text-white px-10 py-4 rounded-md w-full max-w-[448px] shadow-lg mt-6">
         상담예약
       </button>
     </form>
