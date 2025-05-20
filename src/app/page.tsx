@@ -12,7 +12,7 @@ export default function Home() {
     <div>
       <header className="flex justify-between items-center p-4 bg-gray-800 text-white w-full">
         <div className="flex items-center justify-between w-full max-w-[1200px] mx-auto ">
-          <Image src="/image/logo-bestshop-ys.png" alt="로고" width={380} height={380} priority />
+          <Image src="/image/logo-bestshop-ys.png" alt="로고" width={380} height={380} />
           <a href="#smsForm" className=" text-white font-bold px-6 py-2 rounded-xl border-[1px] border-white text-sm md:text-base hover:bg-white hover:text-gray-800 transition duration-300">
             상담예약
           </a>
@@ -27,6 +27,7 @@ export default function Home() {
             layout="responsive" // intrinsic이미지 비율 유지responsive
             width={1000} // 적당한 크기로 설정
             height={1300} // 비율에 맞게 설정
+            priority={true} // 페이지 로드 시 우선적으로 로드
           />
         </div>
 
