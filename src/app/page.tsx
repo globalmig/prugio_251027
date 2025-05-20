@@ -70,7 +70,7 @@ export default function Home() {
       {/* 모바일 전용 하단 예약 버튼 (SendSMSForm 보이면 숨김) */}
       {!hideButton && (
         <div className="fixed bottom-4 left-1/2 -translate-x-1/2 w-[90%] sm:hidden z-50">
-          <a href="#smsForm" className="block bg-gray-800 text-white text-center font-bold py-3 rounded-xl shadow-lg hover:bg-blue-700 transition duration-300">
+          <a href="#smsForm" className="block bg-[#7A26FF] text-white text-center font-bold py-3 rounded-xl shadow-lg hover:bg-[#24114c] transition duration-300">
             빠른 상담 예약하기
           </a>
         </div>
