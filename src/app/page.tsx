@@ -60,7 +60,7 @@ export default function Home() {
         </div>
 
         {/* SendSMSForm에 ref 달기 */}
-        <div ref={smsFormRef}>
+        <div ref={smsFormRef} className="w-full">
           <SendSMSForm />
         </div>
 
