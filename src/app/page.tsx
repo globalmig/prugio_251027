@@ -10,10 +10,13 @@ import Script from "next/script";
 export default function Home() {
   return (
     <div>
-      <header className="flex justify-between items-center p-4 bg-gray-800 text-white w-full">
+      <header className="flex justify-between items-center p-4 bg-gray-800 text-white w-full h-[74px]">
         <div className="flex items-center justify-between w-full max-w-[1200px] mx-auto ">
-          <Image src="/image/logo-bestshop-ys.png" alt="로고" width={380} height={380} />
-          <a href="#smsForm" className=" text-white font-bold px-6 py-2 rounded-xl border-[1px] border-white text-sm md:text-base hover:bg-white hover:text-gray-800 transition duration-300">
+          <div className="md:w-80 w-64">
+            <Image src="/image/logo-bestshop-ys.png" alt="로고" width={380} height={380} priority={true} layout="responsive" />
+          </div>
+
+          <a href="#smsForm" className=" text-white font-bold px-10 md:px-6 py-2 rounded-xl border-[1px] border-white text-base hover:bg-white hover:text-gray-800 transition duration-300">
             상담예약
           </a>
         </div>
@@ -22,12 +25,12 @@ export default function Home() {
       <main className="flex flex-col items-center justify-center  w-full h-full ">
         <div className="max-w-[1200px] ">
           <Image
-            src="/image/detailpage.jpg"
+            src="/image/detailpage.webp"
             alt="배너"
             layout="responsive" // intrinsic이미지 비율 유지responsive
             width={1000} // 적당한 크기로 설정
             height={1300} // 비율에 맞게 설정
-            priority={true} // 페이지 로드 시 우선적으로 로드
+            priority
           />
         </div>
 
