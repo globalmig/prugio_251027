@@ -22,7 +22,7 @@ export default function Home() {
       <main className="flex flex-col items-center justify-center  w-full h-full ">
         <div className="max-w-[1200px] ">
           <Image
-            src="/image/detailpage.png"
+            src="/image/detailpage.jpg"
             alt="배너"
             layout="responsive" // intrinsic이미지 비율 유지responsive
             width={1000} // 적당한 크기로 설정
