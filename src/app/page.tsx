@@ -32,8 +32,8 @@ export default function Home() {
 
   return (
     <div>
-      <header className="flex justify-between items-center p-4 bg-gray-800 text-white w-full h-[74px]">
-        <div className="flex items-center justify-between w-full max-w-[1000px] mx-auto ">
+      <header className="flex justify-between items-center p-4 bg-gray-800 text-white w-full h-[74px] fixed">
+        <div className="flex items-center justify-between w-full max-w-[1000px] mx-auto">
           <div className="md:w-80 w-64">
             <Image src="/image/logo-bestshop-ys.png" alt="로고" width={380} height={380} priority={true} layout="responsive" />
           </div>
@@ -47,7 +47,7 @@ export default function Home() {
         </div>
       </header>
 
-      <main className="flex flex-col items-center justify-center w-full h-full ">
+      <main className="flex flex-col items-center justify-center w-full h-full pt-[74px] ">
         <div className="w-full max-w-[1000px] mx-auto">
           <Image
             src="/image/detailpage.png"
