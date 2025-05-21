@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   title: "LG Best Shop 용산전자상가점",
   description: "LG Best Shop 용산전자상가점 개인 홈페이지입니다.",
   icons: {
-    icon: "src/app/icon.ico",
+    icon: "/image/Lg_favicon.png",
   },
 };
 
