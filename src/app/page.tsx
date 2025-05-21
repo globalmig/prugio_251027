@@ -4,10 +4,11 @@ import Image from "next/image";
 import { SendSMSForm } from "./SMSFrom";
 import Kakao from "./Kakao";
 import { useState, useEffect, useRef } from "react";
+import Link from "next/link";
 
 export default function Home() {
   const [hideButton, setHideButton] = useState(false);
-  const smsFormRef = useRef(null);
+  const smsFormRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     if (!smsFormRef.current) return;
@@ -24,26 +25,50 @@ export default function Home() {
     );
 
     observer.observe(smsFormRef.current);
-
+    window.scrollTo(0, 0);
     return () => {
       if (smsFormRef.current) observer.unobserve(smsFormRef.current);
     };
   }, []);
 
+  // 상담예약 버튼 클릭시 스크롤 처리 함수
+  const scrollToForm = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+
+    if (smsFormRef.current) {
+      const headerHeight = 74; // 헤더 높이
+      const windowHeight = window.innerHeight;
+      const element = smsFormRef.current as HTMLDivElement;
+      const formHeight = element.offsetHeight;
+
+      // 폼 요소의 위치
+      const formTop = element.getBoundingClientRect().top + window.scrollY;
+
+      // 폼이 화면 중앙에 오도록 계산 (헤더 높이 고려)
+      const scrollPosition = formTop - (windowHeight - formHeight) / 2 - headerHeight;
+
+      window.scrollTo({
+        top: scrollPosition,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <div>
       <header className="flex justify-between items-center p-4 bg-gray-800 text-white w-full h-[74px] fixed">
         <div className="flex items-center justify-between w-full max-w-[1000px] mx-auto">
-          <div className="md:w-80 w-64">
-            <Image src="/image/logo-bestshop-ys.png" alt="로고" width={380} height={380} priority={true} layout="responsive" />
-          </div>
-
-          <a
-            href="#smsForm"
-            className=" text-white font-bold px-4 hidden sm:inline-block md:px-6 py-2 rounded-xl border-[1px] border-white text-base hover:bg-white hover:text-gray-800 transition duration-300"
+          <Link href="/">
+            <div className="md:w-80 w-64">
+              <Image src="/image/logo-bestshop-ys.png" alt="로고" width={380} height={380} priority={true} layout="responsive" />
+            </div>
+          </Link>
+          <button
+            onClick={scrollToForm}
+            className="text-white font-bold px-4 hidden sm:inline-block md:px-6 py-2 rounded-xl border-[1px] border-white text-base hover:bg-white hover:text-gray-800 transition duration-300"
           >
             상담예약
-          </a>
+          </button>
         </div>
       </header>
 
@@ -60,7 +85,7 @@ export default function Home() {
         </div>
 
         {/* SendSMSForm에 ref 달기 */}
-        <div ref={smsFormRef} className="w-full">
+        <div id="smsForm" ref={smsFormRef} className="w-full">
           <SendSMSForm />
         </div>
 
@@ -70,9 +95,9 @@ export default function Home() {
       {/* 모바일 전용 하단 예약 버튼 (SendSMSForm 보이면 숨김) */}
       {!hideButton && (
         <div className="fixed bottom-4 left-1/2 -translate-x-1/2 w-[90%] sm:hidden z-50">
-          <a href="#smsForm" className="block bg-[#7A26FF] text-white text-center font-bold py-3 rounded-xl shadow-lg hover:bg-[#24114c] transition duration-300">
+          <button onClick={scrollToForm} className="block w-full bg-[#7A26FF] text-white text-center font-bold py-3 rounded-xl shadow-lg hover:bg-[#24114c] transition duration-300">
             빠른 상담 예약하기
-          </a>
+          </button>
         </div>
       )}
 
