@@ -44,7 +44,7 @@ export function SendSMSForm() {
 
       <div className="inputs flex flex-col gap-4 w-full max-w-md">
         <div className="inputType flex gap-2 text-sm md:text-base">
-          {["혼수/이사", "구독", "일반"].map((btnType) => (
+          {["혼수/이사", "구독", "일반구매"].map((btnType) => (
             <button
               type="button"
               key={btnType}
