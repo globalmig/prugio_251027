@@ -33,7 +33,7 @@ export default function Home() {
   return (
     <div>
       <header className="flex justify-between items-center p-4 bg-gray-800 text-white w-full h-[74px]">
-        <div className="flex items-center justify-between w-full max-w-[1200px] mx-auto ">
+        <div className="flex items-center justify-between w-full max-w-[1000px] mx-auto ">
           <div className="md:w-80 w-64">
             <Image src="/image/logo-bestshop-ys.png" alt="로고" width={380} height={380} priority={true} layout="responsive" />
           </div>
@@ -47,14 +47,14 @@ export default function Home() {
         </div>
       </header>
 
-      <main className="flex flex-col items-center justify-center  w-full h-full ">
-        <div className="w-full max-w-[1200px] mx-auto">
+      <main className="flex flex-col items-center justify-center w-full h-full ">
+        <div className="w-full max-w-[1000px] mx-auto">
           <Image
-            src="/image/detailpage.webp"
+            src="/image/detailpage.png"
             alt="배너"
-            layout="responsive"
-            width={1200} // 최대 보여줄 크기로 설정
+            width={1000} // 최대 보여줄 크기로 설정
             height={1600} // 비율에 맞춰 계산 (예시)
+            quality={100} // 화질 최대치
             priority
           />
         </div>
