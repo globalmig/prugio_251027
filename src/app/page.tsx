@@ -60,7 +60,7 @@ export default function Home() {
         <div className="flex items-center justify-between w-full max-w-[1000px] mx-auto">
           <Link href="/">
             <div className="md:w-80 w-64">
-              <Image src="/image/logo-bestshop-ys.ico" alt="로고" width={380} height={380} priority={true} layout="responsive" />
+              <Image src="/favicon.ico" alt="로고" width={380} height={380} priority={true} layout="responsive" />
             </div>
           </Link>
           <button
