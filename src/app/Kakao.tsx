@@ -13,9 +13,9 @@ export default function Kakao() {
   if (loading) return <div>Loading Kakao Map...</div>;
 
   return (
-    <Map center={{ lat: 37.5319, lng: 126.9651 }} style={{ width: "100%", height: "360px" }}>
+    <Map center={{ lat: 37.5327888550584, lng: 126.959558538475 }} style={{ width: "100%", height: "360px" }}>
       <Link href="https://map.naver.com/p/entry/place/33706664?c=18.08,0,0,0,dh">
-        <CustomOverlayMap position={{ lat: 37.5319, lng: 126.9651 }}>
+        <CustomOverlayMap position={{ lat: 37.5327888550584, lng: 126.959558538475 }}>
           <div style={{ position: "relative", display: "inline-block", textAlign: "center" }}>
             {/* 말풍선 박스 */}
             <div
