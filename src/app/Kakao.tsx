@@ -1,5 +1,6 @@
 import { Map, CustomOverlayMap, useKakaoLoader } from "react-kakao-maps-sdk";
 import Link from "next/link";
+import Image from "next/image";
 export default function Kakao() {
   const appkey = process.env.NEXT_PUBLIC_KAKAO_MAP_API_KEY;
 
@@ -27,7 +28,7 @@ export default function Kakao() {
                 whiteSpace: "nowrap",
                 fontSize: "14px",
                 color: "#000",
-                marginBottom: "6px",
+                marginBottom: "0px",
               }}
             >
               서울특별시 용산구 청파로 74 용산전자랜드
@@ -43,6 +44,9 @@ export default function Kakao() {
                 margin: "0 auto",
               }}
             />
+            <div style={{ display: "flex", justifyContent: "center" }}>
+              <Image src="/image/Lg_icon.png" alt="로고" width={25} height={25} style={{ marginTop: "2px" }} />
+            </div>
           </div>
         </CustomOverlayMap>
       </Link>
