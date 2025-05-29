@@ -81,7 +81,7 @@ export default function Home() {
                 <Image src="/image/Icon_call_black.png" alt={"전화 아이콘"} width={20} height={20} className="group-hover:block hidden" />
                 상담
               </button>
-              <button className="group sm:flex sl:hidden flex gap-1 text-white font-bold px-2 md:px-4 py-2 rounded-xl border-[1px] border-white text-base hover:bg-white hover:text-gray-800 transition duration-300">
+              <button className="group sm:flex sl:hidden flex gap-1 text-white font-bold px-2 md:px-4 py-2 rounded-xl border-[1px] border-white  hover:bg-white hover:text-gray-800 transition duration-300 text-sm">
                 <Image src="/image/Icon_call.png" alt={"전화 아이콘"} width={20} height={20} className="group-hover:hidden block transition duration-300" />
                 <Image src="/image/Icon_call_black.png" alt={"전화 아이콘"} width={20} height={20} className="group-hover:block hidden" />
               </button>
@@ -112,7 +112,7 @@ export default function Home() {
 
       {/* 모바일 전용 하단 예약 버튼 (SendSMSForm 보이면 숨김) */}
       {!hideButton && (
-        <div className="fixed bottom-4 left-1/2 -translate-x-1/2 w-[90%] sm:hidden z-50">
+        <div className="fixed bottom-4 left-1/2 -translate-x-1/2 w-[90%] xs:block md:hidden z-50">
           <button onClick={scrollToForm} className="block w-full bg-[#7A26FF] text-white text-center font-bold py-3 rounded-xl shadow-lg hover:bg-[#24114c] transition duration-300">
             빠른 상담 예약하기
           </button>
