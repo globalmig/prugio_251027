@@ -12,7 +12,7 @@ const config: Config = {
         xs: "320px",
         sm: "360px",
         sl: "420px",
-        md: "768px",
+        md: "600px",
         lg: "1024px",
         xl: "1280px",
       },
