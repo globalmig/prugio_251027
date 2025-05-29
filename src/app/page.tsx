@@ -66,15 +66,24 @@ export default function Home() {
           <div className="flex items-center gap-4">
             <button
               onClick={scrollToForm}
-              className="text-white font-bold px-4 hidden sm:inline-block md:px-6 py-2 rounded-xl border-[1px] border-white text-base hover:bg-white hover:text-gray-800 transition duration-300"
+              className="text-white font-bold px-4 hidden md:block md:px-6 py-2 rounded-xl border-[1px] border-white text-base hover:bg-white hover:text-gray-800 transition duration-300"
             >
               상담예약
             </button>
             <Link href="/Call" className="flex items-center gap-2">
-              <button className="group flex gap-1 text-white font-bold px-3 md:px-4 py-2 rounded-xl border-[1px] border-white text-base hover:bg-white hover:text-gray-800 transition duration-300">
+              <button className="group gap-1 text-white font-bold px-3 md:px-4 py-2 rounded-xl border-[1px] border-white text-base hover:bg-white hover:text-gray-800 transition duration-300 hidden sl:flex">
                 <Image src="/image/Icon_call.png" alt={"전화 아이콘"} width={20} height={20} className="group-hover:hidden block transition duration-300" />
                 <Image src="/image/Icon_call_black.png" alt={"전화 아이콘"} width={20} height={20} className="group-hover:block hidden" />
                 전화상담
+              </button>
+              <button className="group hidden   gap-1 text-white font-bold px-2 md:px-4 py-2 rounded-xl border-[1px] border-white text-base hover:bg-white hover:text-gray-800 transition duration-300">
+                <Image src="/image/Icon_call.png" alt={"전화 아이콘"} width={20} height={20} className="group-hover:hidden block transition duration-300" />
+                <Image src="/image/Icon_call_black.png" alt={"전화 아이콘"} width={20} height={20} className="group-hover:block hidden" />
+                상담
+              </button>
+              <button className="group sm:flex sl:hidden flex gap-1 text-white font-bold px-2 md:px-4 py-2 rounded-xl border-[1px] border-white text-base hover:bg-white hover:text-gray-800 transition duration-300">
+                <Image src="/image/Icon_call.png" alt={"전화 아이콘"} width={20} height={20} className="group-hover:hidden block transition duration-300" />
+                <Image src="/image/Icon_call_black.png" alt={"전화 아이콘"} width={20} height={20} className="group-hover:block hidden" />
               </button>
             </Link>
           </div>
