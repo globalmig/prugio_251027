@@ -56,7 +56,7 @@ export default function Home() {
 
   return (
     <div>
-      <header className="flex justify-between items-center p-4 bg-white text-emerald-900 w-full h-[74px] fixed shadow-lg">
+      <header className="flex justify-between items-center p-4 bg-white text-emerald-900 w-full h-[74px] fixed shadow-lg z-40">
         <div className="flex items-center justify-between w-full max-w-[1000px] mx-auto">
           <Link href="/">
             <div className="md:w-80 w-64">
