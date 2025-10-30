@@ -37,24 +37,24 @@ export function SendSMSForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col justify-center items-center w-full py-12 mb-4 bg-gray-100 gap-4 px-4 ">
-      <h3 className="text-xl md:text-2xl font-bold" id="smsForm">
+    <form onSubmit={handleSubmit} className="flex flex-col justify-center items-center w-full py-32 gap-4 px-4 ">
+      <h3 className="text-xl md:text-2xl font-bold text-white " id="smsForm">
         간편 상담신청
       </h3>
 
       <div className="inputs flex flex-col gap-4 w-full max-w-md">
-        <div className="inputType flex gap-2 text-sm md:text-base">
+        {/* <div className="inputType flex gap-2 text-sm md:text-base">
           {["혼수/이사", "구독", "일반구매"].map((btnType) => (
             <button
               type="button"
               key={btnType}
-              className={`px-4 py-4 w-full max-w-[140px] shadow-lg rounded-md ${type === btnType ? "bg-[#24114c] text-white" : "bg-white"}`}
+              className={`px-4 py-4 w-full max-w-[140px] shadow-lg rounded-md ${type === btnType ? "bg-emerald-700 text-white" : "bg-white"}`}
               onClick={() => setType(btnType)}
             >
               {btnType}
             </button>
           ))}
-        </div>
+        </div> */}
         <input
           type="text"
           maxLength={10}
@@ -92,12 +92,12 @@ export function SendSMSForm() {
           </div>
           <div className="mt-4">
             <input type="checkbox" className="mr-2" required />
-            <label>개인정보 수집 및 이용 동의</label>
+            <label className="text-white">개인정보 수집 및 이용 동의</label>
           </div>
         </label>
       </div>
 
-      <button type="submit" className="bg-[#24114c] text-white px-10 py-4 rounded-md w-full max-w-[448px] shadow-lg mt-6">
+      <button type="submit" className="bg-emerald-700 hover:bg-emerald-600 text-white px-10 py-4 rounded-md w-full max-w-[448px] shadow-lg mt-6">
         상담예약
       </button>
     </form>

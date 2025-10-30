@@ -14,8 +14,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "LG Best Shop 용산전자상가점",
-  description: "LG Best Shop 용산전자상가점 개인 홈페이지입니다.",
+  title: "상인 푸르지오 센터파크 | 사전 예약 신청",
+  description: "상인 푸르지오 센터파크 사전 예약 신청 페이지입니다.",
   icons: {
     icon: "/image/Lg_favicon.png",
   },

@@ -56,22 +56,22 @@ export default function Home() {
 
   return (
     <div>
-      <header className="flex justify-between items-center p-4 bg-gray-800 text-white w-full h-[74px] fixed">
+      <header className="flex justify-between items-center p-4 bg-white text-emerald-900 w-full h-[74px] fixed shadow-lg">
         <div className="flex items-center justify-between w-full max-w-[1000px] mx-auto">
           <Link href="/">
             <div className="md:w-80 w-64">
-              <Image src="/image/logo-bestshop-ys.png" alt="로고" width={380} height={380} priority={true} layout="responsive" />
+              <Image src="/image/logo.png" alt="로고" width={380} height={380} priority={true} layout="responsive" />
             </div>
           </Link>
           <div className="flex items-center gap-4">
             <button
               onClick={scrollToForm}
-              className="text-white font-bold px-4 hidden md:block md:px-6 py-2 rounded-xl border-[1px] border-white text-base hover:bg-white hover:text-gray-800 transition duration-300"
+              className="text-white bg-emerald-900 font-bold px-4 hidden md:block md:px-6 py-2 rounded-xl border-[1px] border-white text-base hover:bg-white hover:text-gray-800 transition duration-300"
             >
               상담예약
             </button>
             <Link href="/Call" className="flex items-center gap-2">
-              <button className="group gap-1 text-white font-bold px-3 md:px-4 py-2 rounded-xl border-[1px] border-white text-base hover:bg-white hover:text-gray-800 transition duration-300 hidden sl:flex">
+              <button className="group gap-1 text-white bg-emerald-900 font-bold px-3 md:px-4 py-2 rounded-xl border-[1px] border-white text-base hover:bg-white hover:text-gray-800 transition duration-300 hidden sl:flex">
                 <Image src="/image/Icon_call.png" alt={"전화 아이콘"} width={20} height={20} className="group-hover:hidden block transition duration-300" />
                 <Image src="/image/Icon_call_black.png" alt={"전화 아이콘"} width={20} height={20} className="group-hover:block hidden" />
                 전화상담
@@ -90,10 +90,18 @@ export default function Home() {
         </div>
       </header>
 
-      <main className="flex flex-col items-center justify-center w-full h-full pt-[74px] ">
+      <main className="flex flex-col items-center justify-center w-full h-full pt-[74px] bg-emerald-950">
         <div className="w-full max-w-[1000px] mx-auto">
           <Image
-            src="/image/detailpage.png"
+            src="/image/hero.png"
+            alt="배너"
+            width={1000} // 최대 보여줄 크기로 설정
+            height={1600} // 비율에 맞춰 계산 (예시)
+            quality={100} // 화질 최대치
+            priority
+          />
+          <Image
+            src="/image/detailpage_prugio.png"
             alt="배너"
             width={1000} // 최대 보여줄 크기로 설정
             height={1600} // 비율에 맞춰 계산 (예시)
@@ -107,22 +115,26 @@ export default function Home() {
           <SendSMSForm />
         </div>
 
-        <Kakao />
+        {/* <Kakao /> */}
       </main>
 
       {/* 모바일 전용 하단 예약 버튼 (SendSMSForm 보이면 숨김) */}
       {!hideButton && (
         <div className="fixed bottom-4 left-1/2 -translate-x-1/2 w-[90%] xs:block md:hidden z-50">
-          <button onClick={scrollToForm} className="block w-full bg-[#7A26FF] text-white text-center font-bold py-3 rounded-xl shadow-lg hover:bg-[#24114c] transition duration-300">
+          <button onClick={scrollToForm} className="block w-full bg-emerald-900 text-white text-center font-bold py-3 rounded-xl shadow-lg hover:bg-emerald-600 transition duration-300">
             빠른 상담 예약하기
           </button>
         </div>
       )}
 
-      <footer className="flex flex-col justify-center items-center p-10 bg-gray-800 text-slate-400 gap-2s text-sm mx-auto ">
-        <p>대표: 김진웅 / 사업자명: 우주전자 전자랜드지점</p>
-        <p>사업자등록번호: 106-85-38456</p>
-        <p>주소: 서울특별시 용산구 청파로 74 용산전자랜드</p>
+      <footer className="flex flex-col justify-center items-center px-10 py-20 bg-[#163020] text-slate-500 gap-2s text-sm mx-auto">
+        <div className="md:w-80 w-64 mb-10">
+          <Image src="/image/logo_white.png" alt="로고" width={380} height={380} priority={true} layout="responsive" />
+        </div>
+        <p>대표: 박종환</p>
+        <p>법인명: 위너스법원경매</p>
+        <p>사업자등록번호: 327-05-03362</p>
+        <p>주소: 세종특별자치시 새롬중앙로 20, 803동 210호(새롬동, 새뜸마을 8단지)</p>
       </footer>
     </div>
   );

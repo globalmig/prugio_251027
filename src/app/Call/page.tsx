@@ -5,8 +5,8 @@ import { useEffect, useState } from "react";
 
 export default function CallPage() {
   const [isMobile, setIsMobile] = useState(false);
-  const phoneNumber = "02-703-7399";
-  const formattedPhone = "02-703-7399";
+  const phoneNumber = "010-5487-1618";
+  const formattedPhone = "010-5487-1618";
 
   useEffect(() => {
     // 모바일 디바이스 감지
@@ -35,14 +35,13 @@ export default function CallPage() {
 
   return (
     <div className="min-h-screen flex flex-col relative">
-      <header className="flex justify-between items-center p-4 bg-gray-800 text-white w-full h-[74px] fixed top-0 z-10">
-        <div className="flex items-center justify-between w-full max-w-[1000px] h-[74px] mx-auto">
+      <header className="flex justify-between items-center p-4 bg-white text-emerald-900 w-full h-[74px] fixed shadow-lg">
+        <div className="flex items-center justify-between w-full max-w-[1000px] mx-auto">
           <Link href="/">
-            <div className="md:w-80 w-64 h-[50px] relative">
-              <Image src="/image/logo-bestshop-ys.png" alt="로고" fill style={{ objectFit: "contain" }} priority={true} />
+            <div className="md:w-80 w-64">
+              <Image src="/image/logo.png" alt="로고" width={380} height={380} priority={true} layout="responsive" />
             </div>
           </Link>
-          <div className="flex items-center gap-4"></div>
         </div>
       </header>
 
@@ -59,8 +58,8 @@ export default function CallPage() {
             </>
           ) : (
             <>
-              <p className="text-lg my-8">PC 사용자는 아래 전화번호로 연락부탁드립니다.</p>
-              <div className="mb-8 flex items-center justify-center gap-6">
+              <p className="text-lg my-8 break-keep">PC 사용자는 아래 전화번호로 연락부탁드립니다.</p>
+              <div className="mb-8 flex md:flex-row flex-col items-center justify-center gap-6">
                 <p className="text-2xl font-bold">{formattedPhone}</p>
                 <button onClick={copyPhoneNumber} className="group border border-black hover:bg-gray-700 hover:text-white text-blacks px-4 py-2 rounded-lg transition duration-300 flex gap-2">
                   <Image src="/image/Icon_copy_white.png" alt={"복사 아이콘"} width={20} height={20} className="group-hover:block hidden" />
@@ -72,7 +71,7 @@ export default function CallPage() {
           )}
 
           <Link href="/">
-            <button className="hover:underline text-center w-fit mx-auto text-white font-bold px-4 sm:inline-block md:px-6 py-2 rounded-xl border-[1px] border-white text-base hover:bg-white hover:text-gray-800 transition duration-300 bg-black hover:border-black cursor-pointer mt-4">
+            <button className="hover:underline text-center max-w-[400px] mx-auto text-white font-bold  sm:inline-block px-20 w-full py-4  rounded-xl border-[1px] border-white text-base hover:bg-white hover:text-gray-800 transition duration-300 bg-black hover:border-black cursor-pointer mt-4">
               메인 홈으로
             </button>
           </Link>
