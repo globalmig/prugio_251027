@@ -37,7 +37,7 @@ export function SendSMSForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col justify-center items-center w-full py-32 gap-4 px-4 ">
+    <form onSubmit={handleSubmit} className="flex flex-col justify-center items-center w-full py-16 md:py-32 gap-4 px-4 ">
       <h3 className="text-xl md:text-2xl font-bold text-white " id="smsForm">
         간편 상담신청
       </h3>
