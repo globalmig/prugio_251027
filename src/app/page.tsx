@@ -94,7 +94,7 @@ export default function Home() {
         <div className="w-full max-w-[1000px] mx-auto">
           <div className="relative">
             <Image
-              src="/image/hero2.png"
+              src="/image/푸르지오_1.jpg"
               alt="배너"
               width={1000}
               height={1600}
@@ -111,10 +111,10 @@ export default function Home() {
           </div>
 
           <Image
-            src="/image/detailpage_prugio.png"
+            src="/image/detailpage_prugio2.png"
             alt="배너"
             width={1000} // 최대 보여줄 크기로 설정
-            height={1600} // 비율에 맞춰 계산 (예시)
+            height={1000} // 비율에 맞춰 계산 (예시)
             quality={100} // 화질 최대치
             priority
           />
