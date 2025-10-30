@@ -137,14 +137,14 @@ export default function Home() {
         </div>
       )}
 
-      <footer className="flex flex-col justify-center items-center px-10 py-20 bg-[#163020] text-slate-500 gap-2s text-sm mx-auto">
-        <div className="md:w-80 w-64 mb-10">
+      <footer className="flex flex-col justify-center items-center px-10 py-10 bg-[#163020] text-slate-500 gap-2s text-sm mx-auto">
+        <div className="md:w-80 w-64 mb-10 text-center">
           <Image src="/image/logo_white.png" alt="로고" width={380} height={380} priority={true} layout="responsive" />
         </div>
         <p>대표: 박종환</p>
         <p>법인명: 위너스법원경매</p>
         <p>사업자등록번호: 327-05-03362</p>
-        <p>주소: 세종특별자치시 새롬중앙로 20, 803동 210호(새롬동, 새뜸마을 8단지)</p>
+        <p className="text-center">주소: 세종특별자치시 새롬중앙로 20, 803동 210호(새롬동, 새뜸마을 8단지)</p>
       </footer>
     </div>
   );

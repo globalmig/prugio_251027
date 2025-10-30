@@ -78,10 +78,14 @@ export default function CallPage() {
         </div>
       </main>
 
-      <footer className="flex flex-col justify-center items-center p-10 bg-gray-800 text-slate-400 gap-2 text-sm w-full mt-auto">
-        <p>대표: 김진웅 / 사업자명: 우주전자 전자랜드지점</p>
-        <p>사업자등록번호: 106-85-38456</p>
-        <p>주소: 서울특별시 용산구 청파로 74 용산전자랜드</p>
+      <footer className="flex flex-col justify-center items-center px-10 py-10 bg-[#163020] text-slate-500 gap-2s text-sm mx-auto w-full">
+        <div className="md:w-80 w-64 mb-10 text-center">
+          <Image src="/image/logo_white.png" alt="로고" width={380} height={380} priority={true} layout="responsive" />
+        </div>
+        <p>대표: 박종환</p>
+        <p>법인명: 위너스법원경매</p>
+        <p>사업자등록번호: 327-05-03362</p>
+        <p className="text-center">주소: 세종특별자치시 새롬중앙로 20, 803동 210호(새롬동, 새뜸마을 8단지)</p>
       </footer>
     </div>
   );
