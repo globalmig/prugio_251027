@@ -5,6 +5,7 @@ import { SendSMSForm } from "./SMSFrom";
 import Kakao from "./Kakao";
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import Contact from "./Coatact";
 
 export default function Home() {
   const [hideButton, setHideButton] = useState(false);
@@ -102,16 +103,28 @@ export default function Home() {
               priority
               className="block mx-auto" // 🔥 이 한 줄이 핵심!
             />
-            {/* <div className="text-white absolute top-10 left-1/2 -translate-x-1/2 text-center space-y-4">
-              <p className="text-3xl md:text-5xl font-bold">아파트분양</p>
-              <p className="text-3xl md:text-5xl font-bold">임차인 모집 예정</p>
-              <p className="text-2xl pt-2 md:pt-8">1533-9896 </p>
-              <p className="text-2xl">010-5487-1618</p>
+            {/* <div className="text-white absolute bottom-40 left-1/2 -translate-x-1/2 text-center space-y-4">
+              <p className="text-2xl pt-2 md:pt-8">010-5487-1618</p>
             </div> */}
           </div>
+          <Link href={"/Call"}>
+            <Contact />
+          </Link>
 
           <Image
-            src="/image/detailpage_prugio2.png"
+            src="/image/detailpage_prugio4.png"
+            alt="배너"
+            width={1000} // 최대 보여줄 크기로 설정
+            height={1000} // 비율에 맞춰 계산 (예시)
+            quality={100} // 화질 최대치
+            priority
+          />
+          <Link href={"/Call"}>
+            <Contact />
+          </Link>
+
+          <Image
+            src="/image/detailpage_prugio5.png"
             alt="배너"
             width={1000} // 최대 보여줄 크기로 설정
             height={1000} // 비율에 맞춰 계산 (예시)
