@@ -8,7 +8,7 @@ export default function Contact() {
       <div className="flex flex-col text-center md:flex-row font-bold text-4xl py-4  break-keep">
         {/* <Image src="/image/Icon_call.png" alt={"전화 아이콘"} width={40} height={10} className="group-hover:hidden block transition duration-300 mr-5" /> */}
         <p className="break-keep md:mr-4">24시 빠른 문의</p>
-        <strong className="text-yellow-300 break-keep">010-5487-1618</strong>
+        <strong className="text-yellow-300 break-keep">1533-9896</strong>
       </div>
       <p className="text-lg font-thin">선착순 전세공급 · HUG보안심전세 · 준공완료 즉시입주</p>
     </div>

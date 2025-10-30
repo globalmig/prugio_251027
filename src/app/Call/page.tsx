@@ -5,8 +5,8 @@ import { useEffect, useState } from "react";
 
 export default function CallPage() {
   const [isMobile, setIsMobile] = useState(false);
-  const phoneNumber = "010-5487-1618";
-  const formattedPhone = "010-5487-1618";
+  const phoneNumber = "1533-9896";
+  const formattedPhone = "1533-9896";
 
   useEffect(() => {
     // 모바일 디바이스 감지
